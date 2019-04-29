@@ -1,11 +1,8 @@
 FROM node:10.13-alpine
 
-LABEL authors="ilpaijin"
+LABEL mantainer="Ilpaijin <ilpaijin@gmail.com>"
 
-RUN apt-get update && \
-    apt-get -y install rsync apt-utils && \
-    apt-get -y remove apt-utils && \
-    apt-get -y autoremove && \
-    rm -rf /var/lib/apt/lists/*
+RUN apk --update --no-cache \
+    add rsync openssh-client
 
 RUN npm install -g @angular/cli
