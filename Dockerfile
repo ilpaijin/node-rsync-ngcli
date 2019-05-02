@@ -1,4 +1,4 @@
-FROM node:11.0-alpine
+FROM node:10.13-alpine
 
 LABEL mantainer="Ilpaijin <ilpaijin@gmail.com>"
 
